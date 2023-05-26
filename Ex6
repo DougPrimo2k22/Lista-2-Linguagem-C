@@ -1,0 +1,32 @@
+/******************************************************************************
+
+lISTA 2 - EXERCÍCIO 6
+          A) imprima o maior elemento 
+          B) imprima a posição do maior elemento
+
+******************************************************************************/
+
+#include <stdio.h>
+
+#define SIZE 15
+
+int main() {
+    float notas[SIZE];
+    float soma = 0.0, media;
+    int i;
+
+    // Leitura das notas dos alunos
+    printf("Digite as notas dos %d alunos:\n", SIZE);
+    for (i = 0; i < SIZE; i++) {
+        printf("Nota do aluno %d: ", i + 1);
+        scanf("%f", &notas[i]);
+        soma += notas[i];
+    }
+
+    // Cálculo da média geral
+    media = soma / SIZE;
+
+    printf("A média geral das notas é: %.2f\n", media);
+
+    return 0;
+}
